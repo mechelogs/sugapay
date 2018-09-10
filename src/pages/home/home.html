@@ -11,4 +11,34 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+
+  <ion-card *ngIf="array_ofdata.length>0">
+  
+    <ion-card-header>
+      Array of data
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item *ngFor="let a of array_ofdata">
+      	{{a}}
+      </ion-item>
+    </ion-card-content>
+  
+  </ion-card>
+
+  <span *ngIf="array_ofdata_empty.length === 0">No Array of data Emty</span>
+  <ion-card *ngIf="array_ofdata_empty.length>0">
+  
+    <ion-card-header>
+      Array of data empty
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item *ngFor="let a of array_ofdata_empty">
+        {{a}}
+      </ion-item>
+    </ion-card-content>
+  
+  </ion-card>
+
 </ion-content>
